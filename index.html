@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+    
+
+
         body {
             background: black;
         }
@@ -39,7 +43,7 @@
             var s = date.getSeconds();
             var session = "AM";
             
-         
+            
 
             if (h == 0){
                 h = 12;
@@ -49,15 +53,19 @@
                 h = h-12;
                 session = "PM";
             }
-    
+            
+            //console.log(h)
+
             h = (h < 10) ? "0" + h : h;
             m = (m < 10) ? "0" + m : m;
             s = (s < 10) ? "0" + s : s;
-    
+            //debugger;
+            //console.log(h)
+
             var time = h + ":" + m + ":" + s + " " + session;
             document.getElementById("MyClockDisplay").innerText = time;
-            document.getElementById("MyClockDisplay").textContent = time;
-            
+            //document.getElementById("MyClockDisplay").textContent = time;
+            //debugger;
             setTimeout(showTime, 1000);
     
         }
